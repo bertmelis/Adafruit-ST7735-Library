@@ -23,3 +23,10 @@ MIT license, all text above must be included in any redistribution.
 Recent Arduino IDE releases include the Library Manager for easy installation. Otherwise, to download, click the DOWNLOAD ZIP button, uncompress and rename the uncompressed folder Adafruit_ST7735. Confirm that the Adafruit_ST7735 folder contains Adafruit_ST7735.cpp, Adafruit_ST7735.h and related source files. Place the Adafruit_ST7735 library folder your ArduinoSketchFolder/Libraries/ folder. You may need to create the Libraries subfolder if its your first library. Restart the IDE.
 
 Also requires the Adafruit_GFX library for Arduino.
+
+*******************
+Modifications for Waveshare 1.8" LCD module
+
+The Waveshare display is based upon the st7735s chip. I added the initialization method `initS()` for
+this display. By trial and error I found out, my display works with a combination of the GREENTAB and BLACKTAB 
+initialization commands.

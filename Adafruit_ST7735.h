@@ -60,6 +60,7 @@ public:
   // plastic overlay) are odd enough that we need to do this 'by hand':
   void initB(void);                             // for ST7735B displays
   void initR(uint8_t options = INITR_GREENTAB); // for ST7735R
+  void initS(void);                             // for ST7735S
 
   void setRotation(uint8_t m);
 

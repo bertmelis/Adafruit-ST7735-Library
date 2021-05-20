@@ -256,6 +256,22 @@ void Adafruit_ST7735::initR(uint8_t options) {
   }
 }
 
+/**************************************************************************/
+/*!
+    @brief  Initialization code common to all ST7735S displays
+*/
+/**************************************************************************/
+void Adafruit_ST7735::initS(void) {
+  commonInit(Rcmd1);
+  displayInit(Rcmd2red);
+  _colstart = 2;
+  _rowstart = 1;
+  displayInit(Rcmd3);
+  uint8_t data = 0xC0;
+  sendCommand(ST77XX_MADCTL, &data, 1);
+  tabcolor = INITR_BLACKTAB;
+}
+
 // OTHER FUNCTIONS *********************************************************
 
 /**************************************************************************/
